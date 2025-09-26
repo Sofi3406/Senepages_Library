@@ -1,0 +1,205 @@
+.book-section {
+  padding: 20px;
+  text-align: center;
+  padding-bottom: 150px; /* extra space for fixed footer */
+}
+
+
+.book-container {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;   /* scrolls if too many */
+  padding: 15px;
+  margin-bottom: 25px; /* space between rows */
+}
+
+.book-card {
+  min-width: 220px;
+  max-width: 220px;
+  background: #E8F5FC;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  flex-shrink: 0;
+  text-align: center;
+}
+
+html, body {
+  margin: 0; 
+  padding: 0;
+  height: 100%;
+  background: #B9CBDA;
+}
+
+/* Dark Mode */
+body.dark {
+  background: #1A1A1A;
+  color: #f1f1f1;
+}
+
+body.dark .navbar {
+  background: #333;
+}
+
+body.dark .book-card {
+  background: #222;
+  color: #fff;
+}
+
+body.dark .footer {
+  background: #111;
+  color: #ddd;
+}
+
+body.dark button {
+  background: #444;
+  color: #fff;
+}
+.footer {
+  position: fixed;       /* Sticks at the bottom */
+  left: 0;               /* No gap on left */
+  bottom: 0;             /* No gap on bottom */
+  width: 100%;           /* Full width */
+  background: linear-gradient(135deg, #1A4561, #397E8B);
+  color: #ffffff;
+  text-align: center;
+  padding: 20px 10px;
+}
+
+.footer-c
+
+ontent {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer h2 {
+  margin: 5px 0;
+  font-size: 20px;
+  color: #ff4500;
+}
+
+.footer p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+.footer-links {
+  margin: 10px 0;
+}
+
+.footer-links a {
+  margin: 0 8px;
+  text-decoration: none;
+  color: #EDE8D0;
+  font-weight: 500;
+}
+
+.footer-links a:hover {
+  color: #ff4500;
+}
+
+.listen-btn, .read-btn {
+  background: #397E8B;  /* your color */
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  margin-top: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.listen-btn:hover {
+  background: #1A4561;
+}
+.quote-section {
+  background: #E8F5FC;   /* light blue background */
+  color: #397E8B;        /* your main color */
+  padding: 20px;
+  text-align: center;
+  margin-top:10px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  font-style: italic;
+}
+
+body.dark .quote-section {
+  background: #222;
+  color: #FFD700;  /* golden color in dark mode */
+}
+
+
+
+
+/* Nav Styling */
+nav {
+  display: flex;
+  justify-content: space-between;  /* title on left, menu/buttons on right */
+  align-items: center;
+  padding: 15px 30px;
+  background: linear-gradient(135deg, #397E8B, #1A4561); /* gradient background */
+  color: #fff;
+  border-radius: 0 0 15px 15px; /* rounded bottom corners */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Dark Mode Nav */
+body.dark nav {
+  background: linear-gradient(135deg, #222, #111);
+  color: #FFD700;
+}
+
+/* Nav title */
+nav h1 {
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* Example nav links (optional) */
+nav .nav-links a {
+  margin-left: 20px;
+  color: #EDE8D0;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+nav .nav-links a:hover {
+  color: #ff4500;
+}
+img{
+  width: 300px;
+  height: 250px;
+  margin-left: 0px;
+  margin-right: 0px;
+ border-radius: 10px;
+ padding-right: 1px;
+ width: fit-content;
+}
+.search-wrapper {
+  width: 100%;
+  max-width: 560px;
+  margin: 12px 0;
+}
+
+.search-input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.no-results {
+  display: none;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #666;
+}

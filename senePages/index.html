@@ -1,0 +1,292 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Senepages Library</title>
+  <link rel="stylesheet" href="s.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <h1>📚Sene pages </h1>
+    <nav>
+      <a href="#" onclick="showPage('home')">Home</a>
+      <a href="#" onclick="showPage('about')">About</a>
+      <a href="#" onclick="showPage('contact')">Contact</a>
+      <a href="#" onclick="showPage('card')">Catagories</a>
+    </nav>
+  </header>
+  
+
+  <!-- HOME -->
+  <section id="home" class="active">
+    <h2 id="homeTitle">Welcome to Senepages Library</h2>
+    <p id="homeText">
+      Welcome to Sene Library 🤝
+      Our library is a hub of knowledge, offering a wide collection of books, journals, and digital resources. 
+      We are dedicated to promoting education and learning for everyone in the community📘📖.<br>
+      እንኳን ወደ ሴኔ ገጾች ቤተ መጽሐፍት በደህና መጡ<br>
+      ቤተ መጽሐፍታችን የእውቀት ቅጥር ነው፣ ሺህ የሚቆጥሩ መጽሐፍቶችን፣ <br>
+      ለማንኛውም ማህበረሰብ ትምህርትን እና ማማረርን ለማስተዋወቅ የተሰጠ።
+📘📖
+
+    </p>
+    <select class="voice-select" id="homeVoice">
+      <option value="en-US">English</option>
+      <option value="am-ET">Amharic</option>
+    </select>
+    <button class="btn" onclick="readText('homeTitle', 'homeVoice')">🔊 Read Title</button>
+    <button class="btn" onclick="readText('homeText', 'homeVoice')">🔊 Read Paragraph</button>
+    <button class="btn" onclick="stopReading()">⏹ Stop Reading</button>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <h2 id="aboutTitle">About Us</h2>
+    <p id="aboutText">
+      <br>
+      Welcome to Sene Library – a simple and open space for readers.
+      Senepages Library was founded with a mission to provide free access to knowledge and information. 
+      Our library hosts thousands of books in different subjects including FICTION❤️, EDUCATION📖, ISLAMIC❤️‍🩹, KIDS🤹🏽‍♂️,  PHILOSOPHY🧠 and poletics
+👥🗣.
+Our goal is to make reading easy for everyone. No login, no complicated steps – just open, select your favorite book, and start reading.
+Here, knowledge is always within reach. Whether you are a student, a teacher, or a curious reader, Sene Library is your branch of wisdom.
+Read freely. Learn easily. Grow endlessly.<br>
+      <br>
+    ቤተ መጽሐፍት ሴኔ ገጾች የእውቀት ማዕከል ነው፣ ለማንኛውም ማህበረሰብ ትምህርትን እና ማማረርን ለማስተዋወቅ የተሰጠ።
+      ቤተ መጽሐፍት ሺህ የሚቆጥሩ መጽሐፍቶችን በተለያዩ ርዕሶች ያካትታል፣ ከእነዚህም ውስጥ FICTION❤️, EDUCATION📖, ISLAMIC❤️‍🩹, KIDS🤹🏽‍♂️,  PHILOSOPHY🧠 እና poletics👥🗣 ያሉ መጽሐፍቶች አሉ።
+      ዓላማችን ለሁሉም መጽሐፍ እንዲደርስ መድረስ ነው። ደግሞ፣ ተማሪ፣ መምህር፣ ወይም አንዳንድ ነገር መጽሐፍ መጻፍ የሚፈልጉ፣ 
+      ቤተ መጽሐፍታችን የእውቀት ቅጥር ነው።
+      <br>
+      <br>
+      <br>
+      Read freely. Learn easily. Grow endlessly.📘📖
+    </p>
+    </select>
+    <button class="btn" onclick="readText('aboutTitle', 'aboutVoice')">🔊 Read Title</button>
+    <button class="btn" onclick="readText('aboutText', 'aboutVoice')">🔊 Read Paragraph</button>
+    <button class="btn" onclick="stopReading()">⏹ Stop Reading</button>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <h2 id="contactTitle">Contact Us👇🏽</h2>
+    <div class="contact-info" id="contactText">
+      <p><strong>📍 Address:</strong> Main Street, Addis Ababa, Ethiopia</p>
+      <p><strong>📞 Phone:</strong> +251 943115365</p>
+      <p><strong>📧 Email:</strong> info@senepageslibrary.com</p>
+    </div>
+
+    <form id="contactForm">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="email" id="email" placeholder="Your Email" required>
+      <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+
+    <div class="message" id="formMessage"></div>
+
+    <select class="voice-select" id="contactVoice">
+      <option value="en-US">English</option>
+      <option value="am-ET">Amharic</option>
+    </select>
+    <button class="btn" onclick="readText('contactTitle', 'contactVoice')">🔊 Read Title</button>
+    <button class="btn" onclick="readText('contactText', 'contactVoice')">🔊 Read Info</button>
+    <button class="btn" onclick="stopReading()">⏹ Stop Reading</button>
+</section>
+<section id="card">
+    
+      <style>
+        body{
+          font-family: Arial, Helvetica, sans-serif;
+          margin: 10px;
+        }
+        .read-btn{
+          text-decoration: none;
+          color: #000000;
+        }
+        .section-title{
+          text-align: center;
+          font-size: 2rem;
+          font-weight: bold;
+          padding: 20px;
+          border-bottom: 5px solid;
+          
+        
+          
+        }
+        /* .mmm{
+          width: 600px;
+          object-fit: cover;
+          
+        } */
+        .book-scroll{
+          display: flex;
+          gap: 20px;
+          overflow-x: 20px;
+          padding: 20px;
+          scroll-behavior: smooth;
+          height:fit-content;
+          width: fit-content;
+        }
+        .book-scroll::-webkit-scrollbar-thumb {
+          border-radius: 5px;
+          width: fit-content;
+        }
+         .nd{
+          width: fit-content;
+        } 
+        .book-card{
+          flex: 0 0 220px;
+          border-radius: 15px;
+          box-shadow: 0 4px 10px;
+          text-align: center;
+          padding: 15px;
+          transition: transform 0.3s;
+        }
+        .book-card:hover {
+          transform: translate(-8px);
+        }
+        .book-card img{
+          width: 100%;
+          border-radius: 12px;
+          height: 100px;
+          object-fit: cover;
+          columns: 3;
+        }
+        .book-section {
+  padding: 20px;
+  text-align: center;
+  padding-bottom: 150px; 
+  /* extra space for fixed footer */
+  height: 300px;
+}
+
+
+.book-container {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;   /* scrolls if too many */
+  padding: 15px;
+  margin-bottom: 25px; /* space between rows */
+}
+
+.book-card {
+  min-width: 220px;
+  max-width: 220px;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  flex-shrink: 0;
+  text-align: center;
+}
+
+        .book-title{
+          font-size: 1.1rem;
+          margin: 10px 0;
+        }
+        .read-btn{
+          display: inline-block;
+          padding: 8px 15px;
+          background: #397e8b;
+          color: #E8F5FC;
+          border-radius: 8px;
+          text-decoration: none;
+          font-weight: bold;
+          transition: background 0.3;
+        }
+        .read-btn:hover{
+          background: #000;
+        }
+        .social-media{
+          display: flex;
+          justify-content: right;
+          gap: 15px;
+          margin-top: 20px;
+        }
+        @media(max-width: 800px) {
+          .book-card {
+            flex: 0 0 180px;
+            background: #E9763E;
+          }
+          .book-card img {
+            height: 250px;
+          }
+        }          
+      </style>
+      <div class="mmm">
+        <div class="book-container">
+      <div class="book-card">
+        <h3>FICTION❤️</h3>
+        <a href="Fiction.html" target="_blank" style="color: #1A4561;">Read</a>
+      </div>
+
+      <div class="book-card">
+        <h3>EDUCATION📖<h3>
+        <a href="Education.html" target="_blank" style="color: #1A4561;">Read</a>
+      </div>
+      <div class="book-card">
+        <h3>ISLAMIC❤️‍🩹</h3>
+        <a href="islamic.html" target="_blank" style="color: #1A4561;">Read</a>
+      </div>
+      </div>
+      <div class="mmm">
+      <div class="book-container">
+      <div class="book-card">
+        
+        <h3>POLITICS👥🗣</h3>
+        <a href="poletics.html" target="_blank" style="color: #1A4561;">Read</a>
+          
+      </div>
+<div class="book-card">
+        <h3>KIDS🤹🏽‍♂️</h3>
+        <a href="kids.html" target="_blank" style="color: #1A4561;">Read</a>
+          
+      </div>
+      <div class="book-card">
+        <h3>PHILOSOPHY🧠</h3>
+        <a href="Philosofer.html" target="_blank" style="color: #1A4561;">Read</a>
+          
+        </div>
+        </div>
+      </body>
+      <div class="hom-sci">
+            <a href="#"><i class='bx bxl-facebook'></i></a>
+            <a href="#"><i class='bx bxl-tiktok'></i></a>
+            <a href="#"><i class='bx bxl-snapchat'></i></a>
+        </div>
+      </div>
+    </html>
+</body>
+</html>
+
+    </div>
+    
+    <div class="social-media">
+      <a href="#" aria-label="Facebook">👍</a>
+      <a href="#" aria-label="Twitter">🐦</a>
+      <a href="#" aria-label="Instagram">📸</a>
+      <a href="#" aria-label="LinkedIn">💼</a>
+
+    </div>
+    
+  </section>
+  <script ></script>
+
+
+    
+
+  <!-- FOOTER -->
+  <footer>
+    &copy; 2025 Senepages Library | All Rights Reserved
+  </footer>
+
+  <script src="s.js"></script>
+
+</body>
+</html>
+
